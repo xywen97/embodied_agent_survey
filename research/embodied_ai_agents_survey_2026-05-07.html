@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>具身智能 Agent 应用调研</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #17202a;
+      --muted: #5d6875;
+      --line: #d8dee6;
+      --panel: #f7f9fb;
+      --accent: #0f766e;
+      --accent-2: #8a5a00;
+      --paper: #ffffff;
+    }
+    body {
+      margin: 0;
+      font: 15px/1.58 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--ink);
+      background: var(--paper);
+    }
+    header {
+      border-bottom: 1px solid var(--line);
+      background: var(--panel);
+    }
+    .wrap {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 28px 24px;
+    }
+    h1 {
+      margin: 0 0 8px;
+      font-size: 32px;
+      letter-spacing: 0;
+    }
+    h2 {
+      margin: 30px 0 12px;
+      font-size: 21px;
+      border-bottom: 1px solid var(--line);
+      padding-bottom: 7px;
+    }
+    h3 {
+      margin: 22px 0 8px;
+      font-size: 17px;
+    }
+    p { margin: 8px 0; }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .meta { color: var(--muted); }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 12px;
+      margin-top: 16px;
+    }
+    .card {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 14px;
+      background: #fff;
+    }
+    .tag {
+      display: inline-block;
+      font-size: 12px;
+      color: #fff;
+      background: var(--accent);
+      border-radius: 999px;
+      padding: 2px 8px;
+      margin-right: 6px;
+    }
+    .tag.warn { background: var(--accent-2); }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 12px 0 18px;
+      font-size: 14px;
+    }
+    th, td {
+      border: 1px solid var(--line);
+      padding: 8px 10px;
+      vertical-align: top;
+      text-align: left;
+    }
+    th { background: var(--panel); }
+    ul { padding-left: 20px; }
+    code, pre {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    }
+    pre {
+      overflow-x: auto;
+      background: #101820;
+      color: #eef6f6;
+      border-radius: 8px;
+      padding: 14px;
+    }
+    .note {
+      border-left: 4px solid var(--accent);
+      background: var(--panel);
+      padding: 10px 14px;
+      margin: 14px 0;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <h1>具身智能 Agent 应用调研</h1>
+      <p class="meta">调研日期：2026-05-07。详细版见同目录 Markdown：<a href="./embodied_ai_agents_survey_2026-05-07.md">embodied_ai_agents_survey_2026-05-07.md</a></p>
+      <p>本页用于展示。完整来源、逐项目说明和链接清单已维护在 Markdown 文档中。</p>
+    </div>
+  </header>
+  <main class="wrap">
+    <h2>核心判断</h2>
+    <div class="grid">
+      <div class="card"><span class="tag">VLA</span><strong>端到端动作模型</strong><p>OpenVLA、π0/openpi、GR00T、Gemini Robotics、Helix、Redwood 直接把视觉/语言/状态映射到动作。</p></div>
+      <div class="card"><span class="tag">Planner</span><strong>高层 Agent + 技能库</strong><p>SayCan、Code as Policies、Inner Monologue、VoxPoser 用 LLM/VLM 做规划、代码生成或 3D grounding。</p></div>
+      <div class="card"><span class="tag">MCP</span><strong>Agent 接 ROS</strong><p>RobotMCP/ros-mcp-server、ROSClaw 可把 OpenClaw/Nanobot/Claude/ChatGPT 接到 ROS topic/service。</p></div>
+      <div class="card"><span class="tag warn">Product</span><strong>闭源产品加速</strong><p>Figure、1X、Sanctuary、Tesla、Boston Dynamics、Agility、Unitree 都在把基础模型和具身硬件结合。</p></div>
+    </div>
+
+    <h2>成熟度分层</h2>
+    <table>
+      <tr><th>层级</th><th>代表</th><th>复现性</th><th>适合用途</th></tr>
+      <tr><td>开源可实验</td><td>LeRobot、OpenVLA、openpi、Octo、VIMA、RobotMCP</td><td>高到中</td><td>实验室复现、机械臂/移动底盘/Unitree G1 迁移</td></tr>
+      <tr><td>开源但迁移成本高</td><td>GR00T、FAST、π0、OpenVLA-OFT</td><td>中</td><td>有 GPU、仿真、遥操作数据和机器人平台的团队</td></tr>
+      <tr><td>Agent 桥接层</td><td>Nanobot、OpenClaw、ROSClaw、ROS-MCP-Server</td><td>中到低</td><td>自然语言调试、ROS 调用、技能编排</td></tr>
+      <tr><td>商业闭源</td><td>Gemini Robotics、Figure Helix、1X Redwood、Covariant RFM-1、Sanctuary Carbon</td><td>低</td><td>产业方向、合作/采购评估</td></tr>
+    </table>
+
+    <h2>最值得跟踪的开源项目</h2>
+    <ul>
+      <li><a href="https://github.com/huggingface/lerobot">LeRobot</a>：机器人学习工具链，统一数据、策略和硬件接口。</li>
+      <li><a href="https://github.com/openvla/openvla">OpenVLA</a>：开源 VLA，提供 REST API 部署和新 embodiment 微调路径。</li>
+      <li><a href="https://github.com/Physical-Intelligence/openpi">openpi</a>：π0、π0-FAST、π0.5 开源模型与训练/推理代码。</li>
+      <li><a href="https://github.com/robotmcp/ros-mcp-server">ROS MCP Server</a>：把 MCP agent 接入 ROS/ROS2 的直接工程入口。</li>
+      <li><a href="https://github.com/octo-models/octo">Octo</a>：基于 Open X-Embodiment 的 generalist robot policy。</li>
+      <li><a href="https://code-as-policies.github.io/">Code as Policies</a> 与 <a href="https://voxposer.github.io/">VoxPoser</a>：LLM 规划/代码生成/3D grounding 的经典路线。</li>
+    </ul>
+
+    <h2>OpenClaw / Nanobot 与硬件的关系</h2>
+    <div class="note">
+      OpenClaw 和 Nanobot 是 agent host/gateway/tool orchestration，不是低层机器人控制器。它们可以作为自然语言入口，通过 MCP server 调用 ROS/SDK；但必须配套权限、白名单、仿真预执行、速度/力矩限制和急停。
+    </div>
+    <pre>OpenClaw / Nanobot / Claude / ChatGPT
+        -> MCP client
+        -> ROS-MCP server
+        -> rosbridge
+        -> ROS topics / services / actions
+        -> robot or simulator</pre>
+
+    <h2>商业产品快照</h2>
+    <table>
+      <tr><th>产品/模型</th><th>方向</th><th>原始资料</th></tr>
+      <tr><td>Gemini Robotics</td><td>VLA + embodied reasoning，面向多机器人形态</td><td><a href="https://deepmind.google/en/models/gemini-robotics/">DeepMind</a></td></tr>
+      <tr><td>Figure Helix</td><td>humanoid VLA，高频上半身连续控制、双机器人协作</td><td><a href="https://www.figure.ai/news/helix">Figure</a></td></tr>
+      <tr><td>1X NEO / Redwood</td><td>家用 humanoid，VLA + world model</td><td><a href="https://www.1x.tech/neo">1X NEO</a></td></tr>
+      <tr><td>NVIDIA GR00T</td><td>开放权重 humanoid foundation model + 仿真数据飞轮</td><td><a href="https://research.nvidia.com/labs/gear/gr00t-n1_5/">NVIDIA Research</a></td></tr>
+      <tr><td>Covariant RFM-1</td><td>仓储机器人 foundation model</td><td><a href="https://covariant.ai/rfm/">Covariant</a></td></tr>
+      <tr><td>Sanctuary Phoenix / Carbon</td><td>工业 humanoid + cognitive control system</td><td><a href="https://www.sanctuary.ai/technology">Sanctuary AI</a></td></tr>
+    </table>
+
+    <h2>推荐实验路线</h2>
+    <ol>
+      <li>用 LeRobot 跑低成本机械臂或 Unitree G1 支持环境，建立数据采集和训练闭环。</li>
+      <li>选择 OpenVLA/OFT 或 openpi/π0 做策略微调，优先复现单任务。</li>
+      <li>接入 RobotMCP/ros-mcp-server，让 agent 先只读 ROS 状态，再开放白名单动作。</li>
+      <li>用 Isaac/MuJoCo/Gazebo 做动作预演，验证碰撞、速度、力矩和工作空间边界。</li>
+      <li>展示链路：自然语言指令 -> agent 计划 -> 仿真验证 -> 硬件执行 -> 日志/视频回传。</li>
+    </ol>
+
+    <h2>完整文档</h2>
+    <p>请查看 <a href="./embodied_ai_agents_survey_2026-05-07.md">Markdown 详细版</a>，其中包含逐项目说明、架构、风险评估和完整原始链接清单。</p>
+  </main>
+</body>
+</html>

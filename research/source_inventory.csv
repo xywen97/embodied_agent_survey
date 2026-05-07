@@ -1,0 +1,27 @@
+category,name,type,maturity,primary_url,secondary_url,notes
+open_source,OpenVLA,GitHub+paper,open reproducible,https://github.com/openvla/openvla,https://arxiv.org/abs/2406.09246,Open-source VLA with deployment examples and REST API path
+open_source,Physical Intelligence openpi,GitHub+model,open reproducible,https://github.com/Physical-Intelligence/openpi,https://www.physicalintelligence.company/research/fast,Includes pi0/pi0-FAST/pi0.5 and FAST tokenizer references
+open_source,Hugging Face LeRobot,GitHub+docs,open reproducible,https://github.com/huggingface/lerobot,https://huggingface.co/docs/lerobot/main/en/index,Practical robot learning stack and hardware docs
+open_source,NVIDIA Isaac GR00T N1,official research+weights,open weights / ecosystem,https://research.nvidia.com/publication/2025-03_nvidia-isaac-gr00t-n1-open-foundation-model-humanoid-robots,https://research.nvidia.com/labs/gear/gr00t-n1_5/,Humanoid foundation model tied to Isaac/Cosmos ecosystem
+open_source,Octo,project+GitHub,open reproducible,https://octo-models.github.io/,https://github.com/octo-models/octo,Generalist robot policy based on Open X-Embodiment
+open_source,VIMA,project+GitHub,open benchmark,https://vimalabs.github.io/,https://github.com/vimalabs/VIMA,Multimodal-prompt robot manipulation benchmark and model
+research,RT-2,official blog+paper,closed but influential,https://deepmind.google/discover/blog/rt-2-new-model-translates-vision-and-language-into-action/,https://blog.google/innovation-and-ai/products/google-deepmind-rt2-robotics-vla-model/,Google DeepMind VLA route
+research,SayCan,official paper page,closed code / reproducible concept,https://research.google/pubs/do-as-i-can-not-as-i-say-grounding-language-in-robotic-affordances/,https://arxiv.org/abs/2204.01691,LLM planner grounded with affordance/value functions
+research,Code as Policies,project+paper,reproducible concept,https://code-as-policies.github.io/,https://arxiv.org/abs/2209.07753,LLM generates Python robot policies
+research,Inner Monologue,project+paper,reproducible concept,https://innermonologue.github.io/,https://arxiv.org/abs/2207.05608,LLM closed-loop planning with text feedback
+research,VoxPoser,project+paper,reproducible concept,https://voxposer.github.io/,https://arxiv.org/abs/2307.05973,LLM/VLM 3D value maps for robot manipulation
+research,ProgPrompt,project+paper,reproducible concept,https://progprompt.github.io/,https://link.springer.com/article/10.1007/s10514-023-10135-3,Program-like prompts for embodied task planning
+mcp_robotics,RobotMCP ROS MCP Server,GitHub+website,open early production,https://github.com/robotmcp/ros-mcp-server,https://robotmcp.ai/,MCP server exposing ROS/ROS2 topics/services to agents
+mcp_robotics,Nanobot,GitHub+website,general agent host,https://github.com/nanobot-ai/nanobot,https://www.nanobot.ai/,Needs ROS/MCP bridge for robot hardware
+mcp_robotics,OpenClaw,GitHub+website,general agent gateway,https://github.com/openclaw/openclaw,https://openclaw.ai/,Needs robotics skills/MCP bridge and safety layer
+mcp_robotics,ROSClaw,GitHub+website,early / needs verification,https://github.com/ros-claw/rosclaw,https://www.rosclaw.io/,Robotics OS concept linking OpenClaw/MCP/ROS/VLA
+commercial,Google DeepMind Gemini Robotics,official product,closed / partner access,https://deepmind.google/en/models/gemini-robotics/,https://deepmind.google/en/models/gemini-robotics/gemini-robotics/,VLA and embodied reasoning models
+commercial,Figure Helix,official technical blog,closed product,https://www.figure.ai/news/helix,https://www.figure.ai/helix,Humanoid VLA for Figure robots
+commercial,1X NEO Redwood,official product+AI page,closed product,https://www.1x.tech/neo,https://www.1x.tech/ai,Home humanoid with Redwood AI and world model direction
+commercial,Covariant RFM-1,official page,closed product,https://covariant.ai/rfm/,https://techcrunch.com/2024/03/11/covariant-is-building-chatgpt-for-robots/,Warehouse robotics foundation model
+commercial,Skild AI,official site,closed product,https://www.skild.ai/,https://www.skild.ai/blogs/building-the-general-purpose-robotic-brain,Omni-bodied robotics foundation model
+commercial,Sanctuary AI Phoenix Carbon,official product+tech,closed product,https://www.sanctuary.ai/technology,https://www.sanctuary.ai/blog/sanctuary-ai-unveils-phoenix-a-humanoid-general-purpose-robot-designed-for-work,Industrial humanoid and cognitive control system
+commercial,Tesla Optimus,official product,closed product,https://www.tesla.com/AI,,Humanoid robot with Tesla autonomy stack
+commercial,Boston Dynamics Atlas,official product,closed platform,https://bostondynamics.com/atlas,https://techcrunch.com/2025/02/05/boston-dynamics-joins-forces-with-its-former-ceo-to-speed-the-learning-of-its-atlas-humanoid-robot/,Electric humanoid platform with AI/RL work
+commercial,Agility Digit,case study,closed product,https://www.nvidia.com/en-us/case-studies/agility-robotics-digit-humanoid-robot/,,Logistics humanoid using Isaac Sim/Lab training flow
+commercial,Unitree G1,official product+open docs,hardware platform,https://www.unitree-robot.com/mobile/g1,https://huggingface.co/docs/lerobot/main/en/unitree_g1,Low-cost humanoid platform with LeRobot ecosystem support
