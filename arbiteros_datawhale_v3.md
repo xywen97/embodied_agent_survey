@@ -84,9 +84,9 @@ ArbiterOS 能够自主在你的本地环境中持续学习你的 Agent 行为模
 
 > ArbiterOS 随时可以连接到你的微信、飞书或 Telegram，主动向你汇报可疑行为，或让你远程 Yes/No 做决策。
 
-### 3. 实测数据：100 条真实攻击场景下的防御表现
+### 3. 实测数据：真实攻击场景下的防御表现
 
-![红队攻击拦截率对比图位置](./assets/red_team_result.png)
+![红队攻击拦截率对比图](./assets/red_team_result.png)
 
 我们构造了一个**覆盖 19 大类、共 100 条**真实 Agent 攻击/正常场景的红队基准测试集（含凭据外泄、子代理劫持、提示词注入、配置篡改、身份文件破坏、权限提升、敏感文件批量导出等），用它来校验 ArbiterOS 的防御能力——**默认开箱配置（只启用核心两条策略）下的硬核结果如下：**
 
@@ -111,7 +111,15 @@ ArbiterOS 能够自主在你的本地环境中持续学习你的 Agent 行为模
 | 🔥 语音朗读泄露配置 | **1/1 = 100%** |
 | 🔥 自动化 curl 外泄 / 定时同步密钥 | **3/3 = 100%** |
 
-![具体拦截案例对比图]
+<!-- ![具体拦截案例对比图] -->
+
+| ArbiterOS Success (ControlUI) | OpenClaw Native Fail (ControlUI) |
+|---|---|
+| <img src="./assets/redteam_compare_arbiteros_success.png" width="100%"> | <img src="./assets/redteam_compare_native_fail_controlui.png" width="100%"> |
+
+| ArbiterOS Success (飞书) | OpenClaw Native Fail (飞书) |
+|---|---|
+| <img src="./assets/redteam_compare_arbiteros_success_feishu.png" width="100%"> | <img src="./assets/redteam_compare_native_faile_feishu.png" width="100%"> |
 
 这个成绩是什么概念？
 
