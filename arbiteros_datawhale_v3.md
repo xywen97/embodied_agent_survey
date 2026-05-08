@@ -76,7 +76,11 @@ ArbiterOS 能够自主在你的本地环境中持续学习你的 Agent 行为模
 
 <!-- ![OpenClaw ControlUI 接收 ArbiterOS 告警截图](./assets/interception_controlUI.png)![飞书接收 ArbiterOS 告警截图](./assets/interception_feishu.png) -->
 
-<img src="./assets/interception_controlUI.png" width="55.2%"><img src="./assets/interception_feishu.png" width="42.5%">
+| OpenClaw ControlUI 接收 ArbiterOS 告警 | 飞书接收 ArbiterOS 告警 |
+|---|---|
+| <img src="./assets/interception_controlUI.png" width="100%"> | <img src="./assets/interception_feishu.png" width="100%"> |
+
+<!-- <img src="./assets/interception_controlUI.png" width="55.2%"><img src="./assets/interception_feishu.png" width="42.5%"> -->
 
 > ArbiterOS 随时可以连接到你的微信、飞书或 Telegram，主动向你汇报可疑行为，或让你远程 Yes/No 做决策。
 
