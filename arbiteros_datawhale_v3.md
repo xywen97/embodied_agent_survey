@@ -131,7 +131,11 @@ ArbiterOS 能够自主在你的本地环境中持续学习你的 Agent 行为模
 
 ## 你以为给 AI 装"保护"很难？从推理到部署，这一切完全自动化
 
-![完整执行流截图位置]
+<!-- ![完整执行流截图](./assets/workflow.png) -->
+
+| ArbiterOS 自动执行安全检查 | ArbiterOS 自动记录所有执行细节 |
+|---|---|
+| <img src="./assets/workflow.png" width="100%"> | <img src="./assets/authorititive_execution_records.png" width="100%"> |
 
 从 Agent 发起 tool_call，到 ArbiterOS 完成拦截判定、返回确认提示、记录 trace——**全部动作在毫秒级内完成**，完全由 ArbiterOS 自主跑在你本地并用日志完整留痕。
 
@@ -163,7 +167,7 @@ cd ArbiterOS
 
 **就这样。** 现在你每一个 Agent 的请求都经过 ArbiterOS，你啥都不用改，它在后面默默记、默默拦。
 
-![install.sh 执行成功截图]
+![install.sh 执行成功截图](./assets/kernel_run.png)
 
 ---
 
